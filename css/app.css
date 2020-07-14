@@ -1,0 +1,53 @@
+body{
+  background-color: burlywood;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    
+  }
+
+input.userInput{
+    width: 70px;
+    height: 25px;
+}
+
+.txtdesc{
+  text-align: left;
+}
+
+.horse{
+  background-color: lightblue ;
+}
+
+.betAmount{
+  background-color: papayawhip;
+}
+.totalWager{
+  background-color:lightgray;
+}
+
+.backAmount{
+  background-color: rgb(240, 103, 26);
+}
+
+.profit{
+  background-color: greenyellow;
+}
+
+.percProfile{
+  background-color: yellow;
+}
+.minbetdesc{
+  background-color: black;
+  color: white ;
+  font-weight: bold;
+}
+.minbet{
+  background-color: royalblue;
+}
+.logo{
+  float: right;;
+}

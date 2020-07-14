@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/app.css" />
+    <script src="./js/app.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <title>Dutching Gambling</title>
+</head>
+<body>
+    <div class="container">
+      <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <!-- <div>
+            <img src="./images/logo.jpg" alt="logo Image" width="150" height="150" class="center" />
+        </div> -->
+        <!-- <h2>Bordered Table</h2>
+        <p>The .table-bordered class adds borders to a table:</p>             -->
+        <table class="table table-bordered text-center table-responsive-md" >
+          <thead>
+            <tr>
+              <th rowspan="2" class="horse">Horse</th>
+              <th rowspan="2" class="horse">Odds Off</th>
+              <th rowspan="2" class="horse">Bet Type</th>
+              <th rowspan="2" class="betAmount">Amount to Bet</th>
+              <th colspan="3" class="totalWager">Total Wager <span style="float: right;">100</span></th>
+              <th rowspan="2" class="percProfile">% Profit</th>
+              <th colspan="2" rowspan="2">Target Wager</th>
+            </tr>
+            <tr>
+              <th class="backAmount" colspan="2">Amount Back</th>
+              <th class="profit" rowspan="2">Profit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-md-1"><input type="text" id="horseInput1" name="horseInput1" class="userInput"></td>
+              <td class="col-md-1"><input type="number" id="oddsHorse1" name="oddsHorse1" class="userInput"></td>
+              <td>
+                <radiogroup>
+                    <input type="radio" id="betHorse1" name="betHorse1" value="d" checked>
+                    <label for="betHorse1">D</label>
+                    <input type="radio" id="betHorse1" name="betHorse1" value="h">
+                    <label for="betHorse1">H</label>      
+                </radiogroup>
+                        
+             </td>
+              <td class="betAmount"><p id="betAmount1"></p></td>
+              <td class="profit"><p id="backAmount1"></p></td>
+              <td class="backAmount"></td>
+              <td class="profit"><p id="betProfit1"></p></td>
+              <td class="percProfile"><p id="percentageProfit1"></p></td>
+              <td colspan="2" class="betAmount"><b>100</b></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="horseInput2" name="horseInput2" class="userInput"></td>
+                <td><input type="number" id="oddsHorse2" name="oddsHorse2" class="userInput"></td>
+                <td>
+
+                    <input type="radio" id="betHorse2" name="betHorse2" value="d" checked>
+                    <label for="betHorse2">D</label>
+                    <input type="radio" id="betHorse2" name="betHorse2" value="h">
+                    <label for="betHorse2">H</label>                            
+
+                </td>
+                <td class="betAmount"><p id="betAmount2"></p></td>
+                <td class="profit"><p id="backAmount2"></p></td>
+                <td class="backAmount"></td>
+                <td class="profit"><p id="betProfit2"></p></td>
+                <td class="percProfile"><p id="percentageProfit2"></p></td>
+                <td colspan="2" class="percProfile"><b>H/D Amounts</b></td>
+                </tr>
+            <tr>
+                <td><input type="text" id="horseInput3" name="horseInput3" class="userInput"></td>
+                <td><input type="number" id="oddsHorse3" name="oddsHorse3" class="userInput"></td>
+                <td>
+                      <input type="radio" id="betHorse3" name="betHorse3" value="d" checked>
+                      <label for="betHorse3">D</label>
+                      <input type="radio" id="betHorse3" name="betHorse3" value="h">
+                      <label for="betHorse3">H</label>                              
+                </td>
+                <td class="betAmount"><p id="betAmount3"></p></td>
+                <td class="profit"><p id="backAmount3"></p></td>
+                <td class="backAmount"></td>
+                <td class="profit"><p id="betProfit3"></p></td>
+                <td class="percProfile"><p id="percentageProfit3"></p></td>
+                <td class="betAmount">Hedged</td>
+                <td class="betAmount">100</td>
+            </tr>
+            <tr>
+              <td><input type="text" id="horseInput4" name="horseInput4" class="userInput"></td>
+              <td><input type="number" id="oddsHorse4" name="oddsHorse4" class="userInput"></td>
+              <td>
+                    <input type="radio" id="betHorse4" name="betHorse4" value="d" checked>
+                    <label for="betHorse4">D</label>
+                    <input type="radio" id="betHorse4" name="betHorse4" value="h">
+                    <label for="betHorse4">H</label>                              
+              </td>
+              <td class="betAmount"><p id="betAmount4"></p></td>
+              <td class="profit"><p id="backAmount4"></p></td>
+              <td class="backAmount"></td>
+              <td class="profit"><p id="betProfit4"></p></td>
+              <td class="percProfile"><p id="percentageProfit4"></p></td>
+                <td class="betAmount">Dutched</td>
+                <td class="betAmount">100</td>
+            </tr>
+              <tr>
+                <td><input type="text" id="horseInput5" name="horseInput5" class="userInput"></td>
+                <td><input type="number" id="oddsHorse5" name="oddsHorse5" class="userInput"></td>
+                <td>
+                      <input type="radio" id="betHorse5" name="betHorse5" value="d">
+                      <label for="betHorse5">D</label>
+                      <input type="radio" id="betHorse5" name="betHorse5" value="h" checked>
+                      <label for="betHorse5">H</label>                              
+                </td>
+                <td class="betAmount"><p id="betAmount5"></p></td>
+                <td class="profit"><p id="backAmount5"></p></td>
+                <td class="backAmount"></td>
+                <td class="profit"><p id="betProfit5"></p></td>
+                <td class="percProfile"><p id="percentageProfit5"></p></td>
+                <td class="betAmount">Total Bet</td>
+                <td class="betAmount">200</td>
+              </tr>
+              <tr>
+                <td><input type="text" id="horseInput6" name="horseInput6" class="userInput"></td>
+                <td><input type="number" id="oddsHorse6" name="oddsHorse6" class="userInput"></td>
+                <td>
+                      <input type="radio" id="betHorse6" name="betHorse6" value="d">
+                      <label for="betHorse6">D</label>
+                      <input type="radio" id="betHorse6" name="betHorse6" value="h" checked>
+                      <label for="betHorse6">H</label>                              
+                </td>
+                <td class="betAmount"><p id="betAmount6"></p></td>
+                <td class="profit"><p id="backAmount6"></p></td>
+                <td class="backAmount"></td>
+                <td class="profit"><p id="betProfit6"></p></td>
+                <td class="percProfile"><p id="percentageProfit6"></p></td>
+                <td class="minbet"><p>Minimum Bet</p> </td>
+                <td class="col-md-1"><input type="text" id="minbet" name="minbet" class="userInput" value="$2"></td>
+          
+            </tr>
+            <tr>
+                <td colspan="8"></td>
+                <td colspan="2" class="minbetdesc"><p>2:1 Bet of $2 Returns $6 </br> For US Tracks </p> </td>
+                
+            </tr>
+            
+              <tr>
+                <td colspan="10" class="txtdesc">
+                  <p> <img src="./images/logo.jpg" alt="logo Image" width="150"
+                    height="150" class="logo" /><strong>Odds Off</strong> can be entered a number or a ratio. Examples: 9-5, 1.8 are all the same.</p>
+                  <p><strong>Bet Type</strong> Select D to Dutch or H to Hedge for each horse.</p>
+                  <!-- <p style="text-indent:50px;">This is free version allows only full dutch or full hedges.</p> -->
+                  <p><strong>Target Wager</strong> is total amount you want to place on this group.</p>
+                  <p><strong>This is for US tracks and tracks that include your bet with the payoff. </br> E.g... a 2 dollar 2:1 wager returns 6 dollars.</strong>.</p>
+                  <!-- <p>For tracks in other countries that do not return your stake winnings, see above link.</p>
+                  <p>George Green</p> -->
+                </td>
+              </tr>
+              <tr>
+                <td colspan="10">
+                <button type="button" class="btn btn-primary" onclick="calculateDutching()">Update</button>
+                <button type="button" class="btn btn-primary" onclick="resetAllFields()">Reset</button>
+                <button type="button" class="btn btn-primary" onclick="window.print(); return false;">Print</button>
+            </td>
+              </tr>
+            
+      
+        </tbody>
+        </table>
+      </div>
+    </div>
+  </div>   
+</body>
+</html>
